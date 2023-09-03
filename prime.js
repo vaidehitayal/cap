@@ -7,10 +7,3 @@ count++
 }
 }
 
-if (count==2){
-console.log("prime no.")
-}
-
-else{
-console.log("Not a prime no.")
-}
