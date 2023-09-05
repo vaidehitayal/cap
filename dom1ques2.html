@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text"  name="name" id="name">
+    <input type="text" name="name" id="name">
 	<select id="gender">
 		<option value="">--</option>
 		<option value="male">M</option>
@@ -27,34 +27,49 @@
 	<button onclick="resetForm()">RESET FORM</button>
 	<button onclick="resetDisplay()">RESET DISPLAY</button>
 </body>
-<script>
-		function showName() {
-			
-           document.getElementById("dName").innerText= document.getElementById("dName").innerText + "-"+
-		}
+<script type="text/javascript">
+    function showName() {
+        // Show filled name inside h1
+        let H1 = document.getElementById("dName");
+        let name = document.getElementById("name").value;
+        H1.innerText=name
+    }
 
-		function showGender() {
-			// Show the selected gender inside h2
-            alert(document.getElementById("gender").Value) 
-		}
+    function showGender() {
+        // Show the selected gender inside h2
+        let H2 = document.getElementById("dGender");
+        let gender = document.getElementById("gender").value;
+       H2.innerText=gender
+    }
 
-		function showEmail() {
-			// Show the filled email inside h3
-            alert(document.getElementById("email").Value) 
-		}
+    function showEmail() {
+        // Show the filled email inside h3
+        let H3 = document.getElementById("dEmail");
+        let email = document.getElementById("email").value;
+        H3.innerText=email
+    }
 
-		function showMobile() {
-			// Show the filled mobile inside h4
-            alert(document.getElementById("mobile").Value) 
-		}
+    function showMobile() {
+        // Show the filled mobile inside h4
+        let H4 = document.getElementById("dMobile");
+        let mobile = document.getElementById("mobile").value;
+        H4.innerText=mobile
+    }
 
-		function resetForm() {
-			// Reset all the form elements to default values (blank "")
-		}
+    function resetForm() {
+        // Reset all the form elements to default values (blank "")
+        document.getElementById("mobile").value="";
+        document.getElementById("email").value="";
+        document.getElementById("gender").value="";
+        document.getElementById("name").value="";
+    }
 
-		function resetDisplay() {
-			// Reset all the headings (h1, h2, h3, h4) to blank values
-		}
-	
+    function resetDisplay() {
+        // Reset all the headings (h1, h2, h3, h4) to blank values
+        document.getElementById("dName").innerHTML="";
+        document.getElementById("dGender").innerText="";
+        document.getElementById("dEmail").innerText="";
+        document.getElementById("dMobile").innerText="";
+    }
 </script>
 </html>
