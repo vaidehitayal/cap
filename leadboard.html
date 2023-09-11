@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: auto;
+            
+        }
+        .button > button{
+            height: 80px;px;
+            width: 80px;
+           margin: auto;
+           margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid red ;margin-left: 35%; margin-right: 30%;">
+        <div style="display: flex;">
+            <div style="margin: auto;">
+                <div style="background-color: red;width: 200px;height: 60px;"> 
+                    <h1 id="min" style="text-align: center;">43</h1>
+                </div>
+                <h1 style="text-align: center;">Min</h1>
+            </div>
+            <div style="margin: auto;">
+                <div style="background-color: green;width: 200px;height: 60px;">
+                    <h1 id="max" style="text-align: center;">2019</h1>
+                </div>
+                <h1 style="text-align: center;">Max</h1>
+            </div>
+        </div>
+    
+        <div style="text-align: center;">
+            <h1># Score</h1>
+            <div style="background-color: grey;width: 85%; height: 60px; margin: auto;">
+            <h1 id="score"> </h1>
+            </div>
+            <div class="button">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button style="text-align: center; margin-left: 127%;">0</button>
+            </div>
+          <button onClick="changeH1()" style="height: 60px;width: 85%;background-color: grey; margin-top: 5px;">ENTER</button>
+        </div>
+    </div>
+   
+</body>
+<script>
+    let score = document.getElementById("score")
+    let min = document.getElementById("min")
+    let max = document.getElementById("max")
+    let input = document.querySelectorAll(".button > button")
+    let enter = document.getElementById("enter")
+    
+    score.innerText = ""
+    for(i=0;i<input.length;i++){
+        input[i].addEventListener("click",function(event){
+            score.innerText =  score.innerText + +event.target.innerText
+            
+        })
+    
+    } 
+
+    
+
+    // enter.addEventListener("click",function(){
+        
+        
+    // })
+
+    function changeH1() {
+        if(+max.innerText < +score.innerText){
+            max.innerText=score.innerText
+        }
+        if(+max.innerText > +score.innerText){
+            min.innerText=score.innerText
+        }
+        
+        score.innerText= ""
+
+    }
+    
+
+</script>
+</html>
