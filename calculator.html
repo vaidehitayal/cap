@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            margin-top: 15px;
+            margin-left: 15px;
+            display: grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-template-rows: 80px 80px 80px 80px ;
+            gap: 10px;
+            
+        }
+        .btn > button{
+            
+            
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 500px; width: 25%; border: 2px solid red ; margin: auto;margin-top: 100px;">
+        <div style="height: 80px; width: 95%; border: 2px solid red ;background-color: antiquewhite; margin: auto;margin-top: 30px;">
+            <h3 id="firstscreen" style="text-align: right;color: red;"></h3>
+            <h2 id="secondscreen" style="text-align: right;"></h2>
+        </div>
+        <div class="btn">
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button style="background-color: grey; font-weight: bold; color: beige;" >/</button>
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button style="background-color: grey; font-weight: bold; color: beige;">*</button>
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button style="background-color: grey; font-weight: bold; color: beige;">+</button>
+            <button style="background-color: black; font-weight: bold; color: beige;">AC</button>
+            <button>0</button>
+            <button style="background-color: grey;font-weight: bold; color: beige;">=</button>
+            <button style="background-color: grey;font-weight: bold; color: beige;">+</button>
+        </div>
+    </div>
+</body>
+<script>
+    let bag = ""
+    let bag1 = ""
+    let first = document.getElementById("firstscreen")
+    let second = document.getElementById("secondscreen")
+    let button = document.querySelectorAll(".btn > button")
+
+    second.innerText = 0
+
+
+    for(i=0;i<button.length;i++){
+        button[i].addEventListener("click",function(event){
+            if(event.target.innerText=="0"|| event.target.innerText=="1"||event.target.innerText=="2"||event.target.innerText=="3"||event.target.innerText=="4"||event.target.innerText=="5"||event.target.innerText=="6"||event.target.innerText=="7"||event.target.innerText=="8"||event.target.innerText=="9"){
+            bag = bag + event.target.innerText
+            second.innerText= bag
+            }
+            if(event.target.innerText=="/"|| event.target.innerText=="*"||event.target.innerText=="+"||event.target.innerText=="-"||event.target.innerText=="."){
+             second.innerText=""  
+             bag1 = event.target.innerText
+             first.innerText= bag 
+             bag = ""
+            }
+            
+            if(event.target.innerText=="="){
+            if(bag1=="+"){
+                second.innerText= first.innerText + second.innerText
+             }
+             if(bag1=="-"){
+                second.innerText= first.innerText - second.innerText
+            }
+            if(bag1=="/"){
+                second.innerText= first.innerText / second.innerText
+            }
+            if(bag1=="*"){
+                second.innerText= first.innerText * second.innerText
+            }
+            }
+            if(event.target.innerText=="AC"){
+             second.innerText= 0
+             bag=""
+             first.innerText=""
+             bag1=""
+             bag3=""
+            }
+            
+        })
+    }
+</script>
+</html>
