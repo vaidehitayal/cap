@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function author(name, birthYear,nationality){
+        let obj = {}
+        obj.name = name;
+        obj.birthYear = birthYear;
+        obj.nationality = nationality;
+        return obj;
+    }
+
+    function bookdetail(title, detailsofauthor, genre, price){
+        this.title =title;
+        this.authodetail = detailsofauthor.name
+        this.genre = genre;
+        this.price = price
+
+        this.getBookInfo = function(){
+            console.log(`${this.title} by  ${this.authodetail} ${this.genre} ${this.price}`)
+            console.log( detailsofauthor.name + ","+detailsofauthor.birthYear +","+ detailsofauthor.nationality)
+        }
+        
+        
+    }
+
+    let author1 = author("vaidu",1968,"indian")
+    let author2 = author("vainktesh",1989,"indian")
+
+    
+
+    let book1 = new bookdetail("mere ram", author1, "religious text book", "450 rs.")
+
+    let book2 = new bookdetail("the mystery of sceince", author2, "geo", "290 rs.")
+
+    book1.getBookInfo()
+
+    book2.getBookInfo()
+
+   
+
+
+    
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+<script>
+ function BankAccount(accountNumber, name, type, balance,isActive){
+        this.accountNumber = accountNumber;
+        this.name = name;
+        this.type = type;
+        this.balance = balance;
+        // this.isActive = isActive;
+
+        this.deposit = function(amount){
+            this.balance += amount
+            console.log(`${this.name} updated balancee is ${this.balance}`)
+        }
+
+        this.withdrawl = function(amount){
+            if(amount<=this.balance){
+                this.balance -= amount
+                console.log(`${this.name} updated balancee is ${this.balance}`)
+            }
+            else{
+                console.log(`in ${this.name} insufficent balance the balance is  ${this.balance}` )
+            }   
+        }
+
+        this.checkbalance = function(){
+            console.log(`${this.name} account balance is ${this.balance}`)
+        }
+            
+    
+
+        this.isActive = function(){
+            if(this.balance<0){
+                console.log("Account is inactive beacuse of insufficent balance")
+            }
+            else{
+                console.log("acoount is active")
+            }
+        }
+
+        
+ }
+
+  let account1 = new BankAccount(5349659256846594865, "shivam", "saving",9000,true)
+
+  let account2 = new BankAccount(5426526556555555555, "vaidu","current", 90000,false)
+
+//   deposit and withdrawl
+
+  account1.deposit(10000)
+
+  account2.withdrawl(900000)
+//   to check account is active or not
+  account1.isActive()
+  account2.isActive()
+
+// to check account balance 
+
+  account1.checkbalance()
+
+// total bank balance present in bank firm 
+
+  let totalbalance = account1.balance + account2.balance
+
+  console.log(totalbalance)
+    
+</script>
+
+</html>
