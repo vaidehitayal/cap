@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function Altofeature(power,fueleconomy,bootspace,price){
+
+        this.power = power;
+        this.fueleconomy=fueleconomy;
+        this.bootspace = bootspace;
+        this.price= price;
+        
+    }
+    Altofeature.prototype.dimensions = function(){
+        console.log(`length:3515,width:1505,height:1475`)
+    }
+
+    let Alto1 = new  Altofeature(67,"24 km/l",177,"3 lakh")
+
+    
+
+    let Alto2 = Object.create(Alto1)
+    Object.setPrototypeOf()
+
+        
+    console.log(Alto2)
+
+
+</script>
+</html>
