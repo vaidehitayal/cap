@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            text-align: center;
+        }
+        .images{
+            height: 50px;
+            width: 50px;
+        }
+        .fooditem > label{
+            font-size: 30px;
+        }
+        .fooditem > input{
+            size: 50px;
+        }
+        #button{
+            font-size: 30px;
+            background-color: red;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>McDonald's Virtual Order </h1>
+        <div id="Menu">
+            <h1>Menu</h1>
+            <div class="fooditem">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-s7AxHDR837lmcLrRSn7BT2xK1yp7BJIAgHPfFeNzjxh8XsTnI-9AzXWkS3g2BCpmkoI&usqp=CAU" alt="" class="images">
+                <input type="checkbox" id="Burger" name="Burger">
+                <label for="Burger">Burger</label>
+            </div>
+            <div class="fooditem">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/French_fries_juliane_kr_r.svg/768px-French_fries_juliane_kr_r.svg.png" alt="" class="images">
+                <input type="checkbox" id="Fries" name="Fries">
+                <label for="Fries">Fries</label>
+            </div>
+            <div class="fooditem">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWTqfD4sBXqxaqSsjndG4Yl757Q-C2W3G3ElrLk6XhQCdRw7PFta27X6PDlJKU9N54cY&usqp=CAU" alt="" class="images">
+                <input type="checkbox" id="Cock" name="Cock">
+                <label for="Coke">Coke</label>
+            </div>
+        </div>
+        <br>
+        <button id="button">Order Food</button>
+        <div class="ordercompleted" id="hidden">
+            <h2>Order Completed</h2>
+            <p>Your Order no is <span id="ordernumber">12345</span></p>
+        </div>
+    </div>
+  
+    
+</body>
+<script>
+    let button = document.getElementById("button") 
+    let div2 = document.getElementById("hidden")
+    div2.style.display = "none "
+
+    let orderid = document.getElementById("ordernumber")
+    orderid.innerHTML = Math.floor((Math.random()*1000)+1)
+
+    button.addEventListener('click',function(e){
+        let randomTime = Math.floor((Math.random()*1000)+1)
+        setTimeout(function(){
+            let order = new Promise((resolve, reject) => {
+                
+                 div2.style.display = "block";
+            })
+        },randomTime)
+    })
+ 
+</script>
+</html>
