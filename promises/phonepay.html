@@ -4,8 +4,557 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+    
+    margin: 0;
+    text-decoration: none;
+        }
+        #pop4 i{
+            font-size: 40px;
+        }
+        .bxs-check-circle{
+            font-size: 40px;
+        }
+
+        .pay-on-mobile{
+            border: 2px solid #5C249A;
+            border-radius: 10px;
+            width: 20%;
+            height: 100px;
+            margin: auto;
+            align-items: center;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            left: 40%;
+            background-color: #598ADE ;
+            display: none;
+        }
+    .btn button{
+            margin-top: 5%;
+            margin-right: 20px;
+            border:2px solid #5C249A;
+            background-color: #5C249A;
+            border-radius: 10px;
+            padding: 6px;
+            width: 60px;
+            color: white;
+            cursor: pointer;
+            }
+    .btn button:hover{
+        background-color: white;
+        color: #5C249A;
+    }
+    .pay-on-mobile input{
+        border: 2px solid #5C249A;
+        border-radius: 10px;
+        margin-top: 2%;
+    }
+    .parent{
+        border: 0px solid red;
+        width: 28%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: rgb(252, 246, 246);
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         
+    }
+    #menu{
+        background-color: #5C249A;
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        border-radius: 10px;
+    }
+    #menu .type .loc2  {
+    display: flex;
+    }
+    #menu .type .loc2 i{
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    #menu .type .loc2 h6{
+        color: white;
+        font-size: 15px ;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #menu .type .loc{
+        font-size: 10px;
+        margin-left: 50px;
+        margin-top: -10px;
+        color: white;
+    }
+    #menu .icons{
+        color: white;
+        margin-top: 25px;
+        margin-right: 10px;
+    } 
+    .parent #first .text{
+        
+    }
+    .parent #first .icons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 25px;
+    }
+    .parent #first .icons i{
+        background-color:#5C249A;
+        font-size: 25px;
+        padding: 6px;
+        border-radius: 10px;
+        color: white;
+    }
+    #first{
+        border: 0px solid blue;
+        margin: auto;
+        width: 98%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 10px;
+        }
+    .icons p{
+        font-size: 10px;
+        margin-right: 5px;
+        }
+    #second{
+        border: 0px solid hotpink;
+        border-radius: 10px;
+        display: flex;
+        height: 25px;
+        width: 98%;
+        margin: auto;
+        background-color: rgb(196, 222, 238);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 10px;
+    }
+    #second p{
+        margin-left: 150px;
+        font-weight: bolder;
+        cursor: pointer;
+
+    }
+    #second h4{
+        font-size: 12px;
+        font-weight: lighter;
+        margin-top: 5px;
+    }
+    #third{
+        width: 98%;
+        margin: auto;
+        display: flex;
+        justify-content:space-between;
+        border: 0px solid green;
+        margin-top: 10px;
+        
+        }
+    #third .refrence {
+        background-color: #598ADE;
+        width: 30%;
+        padding-top: 10px;
+        height: 50px;
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    #third p{
+        font-size: 12px;
+    }
+    #fourth{
+        border: 0px solid orange;
+        height: 190px;
+        margin: auto;
+        width: 98%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 10px;
+    }
+    #fourth .one{
+        display: flex;
+        justify-content: space-between;
+        }
+    #fourth .one h3{
+    font-size: 13px;
+    }
+    #fourth .one button{
+    border-radius: 10px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #5C249A;
+    }
+    #fourth .two {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-auto-rows: 40px;
+  gap: 20px;
+  text-align: center;
+    }
+    #fourth .two p{
+    font-size: 10px;
+    }
+    #fourth .two i{
+    font-size: 30px;
+    color: #5C249A;
+    }
+    .show{
+    background-color: #5C249A;
+    width: 40px;
+    border-radius: 10px;
+    margin-left: 30px;
+    color: white;
+    
+    }
+    .show p{
+    font-size: 15px;
+    margin-top: 8px;
+    }
+    #fifth .home{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 13px;
+    background-color: wheat;
+    border-radius: 10px;
+    margin-top: 10px;
+    }
+    #fifth .home i{
+    background-color: gray;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #fifth .home i:hover {
+    background-color: #5C249A;
+    cursor: pointer;
+    }   
+    </style>
 </head>
 <body>
-    
+    <div class="pay-on-mobile" id="pop1">
+        <h4>Payment successful</h4>
+        <i class='bx bxs-check-circle'></i>
+        <p id="total1"></p>
+        <div class="btn">
+            <button onclick="Back()" >Back</button>
+        </div>
+    </div>
+    <div class="pay-on-mobile" id="pop2">
+        <h4>Your transaction is successful</h4>
+        <i class='bx bxs-check-circle'></i>
+        <p id="total2"></p>
+        <div class="btn">
+            <button onclick="Back()" >Back</button>
+        </div>
+    </div>
+    <div class="pay-on-mobile" id="pop3">
+        <h4>Money succesfuuly added to your bank account</h4>
+        <i class='bx bxs-check-circle'></i>
+        <p id="total3"></p>
+        <div class="btn">
+            <button onclick="Back()" >Back</button>
+        </div>
+    </div>
+    <div class="pay-on-mobile" id="pop4">
+        <h4>Processing, please wait.....</h4>
+        <i class='bx bx-loader-circle'></i>
+        <p></p>
+        <div class="btn">
+            <button onclick="Back()" >Back</button>
+        </div>
+    </div>
+
+ <div class="pay-on-mobile" id="pay-on-mobile">
+        <h4>Pay to the mobile no.</h4>
+        <input id="text1" type="number" placeholder="Enter the number" required>
+        <input id="text2"type="number" placeholder="Enter the amount" required>
+        <div class="btn">
+            <button onclick="Back()" >Back</button>
+            <button onclick="sendMoneyViaMobile()">Pay</button>
+        </div>
+    </div>
+    <div class="pay-on-mobile" id="pay-on-account">
+        <h4>Pay to the Account no.</h4>
+        <input id="text3" type="number" placeholder="Enter the number" required>
+        <input id="text4" type="number" placeholder="Enter the amount" required>
+        <div class="btn">
+            <button onclick="Back()">Back</button>
+            <button onclick="SendMoneyViaAccount()">Pay</button>
+        </div>
+    </div>
+    <div class="pay-on-mobile" id="Add money">
+        <h4>Add money to bank account</h4>
+        <input  id="text5" type="number" placeholder="Enter the amount" required>
+        
+        <div class="btn">
+            <button onclick="Back()">Back</button>
+            <button onclick="AddMoney()">Add</button>    
+        </div>
+    </div>  
+    <div class="pay-on-mobile" id="Balance">
+        <h4>My account Balance </h4>
+        <p id="balance"></p>
+        <div class="btn">
+            <button onclick="Back()">Back</button>  
+        </div>
+    </div> 
+
+    <div class="parent">            
+        <div id="menu">
+            <div class="type">
+                <div class="loc2">
+                <i class='bx bx-user'></i>
+                <h6>Home</h6>
+                </div>
+               <div class="loc">
+                <p>Location</p>
+               </div> 
+            </div>
+            <div class="icons">
+                <i class='bx bx-qr-scan'></i>
+                <i class='bx bx-bell'></i>
+                <i class='bx bx-help-circle'></i>
+            </div>
+        </div>
+        <div id="first">
+            <div class="text">
+                <h4>Transfer Money</h4>
+            </div>
+            
+           <div class="icons">
+            <div class="Icon1">
+                <i onclick="window1()" class='bx bx-user'></i>
+                <p>To Mobile no.</p>
+            </div>
+            
+            <div class="Icon2">
+                <i onclick="window2()" class='bx bx-home-circle'></i>     
+                <p>To Bank UPI ID</p>
+            </div>
+            <div class="Icon3">
+                <i onclick="window3()" class='bx bx-circle-three-quarter'></i>    
+                <p>To self account</p>
+            </div>
+            <div class="Icon4">
+                <i onclick="window4()" class='bx bxs-tachometer'></i>         
+                <p>Check bank Balance</p>
+            </div>
+     </div> 
+    </div>
+     <div id="second">
+      <h4>My UPI ID :<span>abcdef@145</span></h4>
+      <p>></p>
+     </div>
+     <div id="third">
+        <div class="refrence" id="wallet">
+            <i class='bx bxs-wallet' ></i>
+            <p>Phonepe-wallet</p>            
+        </div>
+        
+        <div class="refrence" id="Rewards">
+            <i class='bx bxs-gift'></i>
+            <p>Rewards</p>            
+        </div>
+        
+        <div class="refrence" id="refer">
+            <i class='bx bxs-megaphone'></i>
+            <p>Refer and earn</p>            
+        </div>
+     </div>
+     <div id="fourth">
+        <div class="one">
+            <h3>Recharge and pay bills</h3>
+            <button>My Bills</button>
+        </div>
+        <div class="two">
+            <div class="recharge">
+                <i class='bx bxs-mobile'></i>
+                <p>Mobile reharge</p>
+            </div>
+            <div class="Dth">
+                <i class='bx bx-tv'></i>
+                <p>DTH</p>
+            </div>
+            <div class="electricity">
+                <i class='bx bxs-bulb'></i>
+                <p>Electricity bills</p>    
+            </div>
+            <div class="credit-card">
+                <i class='bx bx-credit-card'></i>
+                <p>credit-card bill payment</p>
+            </div>
+            
+            <div class="Rent">
+                <i class='bx bx-home-smile'></i>
+                <p>House rent</p>
+            </div>
+            <div class="loan-payment">
+                <i class='bx bx-money-withdraw'></i>
+                <p>Loan Repayment</p>
+            </div>
+            <div class="student">
+                <i class='bx bxs-graduation'></i>
+                <p>student fees</p>
+            </div>
+            <div class="show">
+                <p>Show more ></p>
+            </div>
+            
+        </div>
+     </div>
+     <div id="fifth">
+        <div class="home">
+            <div class="fixed">
+                <i class='bx bx-home-alt-2'></i>
+                <p>Home</p>
+            </div>
+            
+            <div class="fixed">
+                <i class='bx bxs-store'></i>
+                <p>Stores</p>
+            </div>
+            
+            <div class="fixed">
+
+                <i class='bx bx-error-circle'></i>
+                <p>Insurance</p>
+            </div>
+            
+            <div class="fixed">
+                <i class='bx bx-rupee'></i>
+                <p>Wealth</p>
+            </div>
+          
+            <div class="fixed">
+                <i class='bx bx-history'></i>
+                <p>History</p>
+            </div>
+        </div>
+     </div>
+    </div>
 </body>
+<script>
+    var accountbalance = 5000; //Math.floor(Math.random()*20000)+20000
+let mobile = document.getElementById("pay-on-mobile");
+let account = document.getElementById("pay-on-account");
+let add = document.getElementById("Add money");
+let balance = document.getElementById("Balance");
+
+let pop1 = document.getElementById("pop1");
+let pop2 = document.getElementById("pop2");
+let pop3 = document.getElementById("pop3");
+let pop4 = document.getElementById("pop4");
+
+let input1 = document.getElementById("text1");
+let input2 = document.getElementById("text2");
+let input3 = document.getElementById("text3");
+let input4 = document.getElementById("text4");
+let input5 = document.getElementById("text5");
+
+function window1() {
+  mobile.style.display = "block";
+}
+
+function window2() {
+  account.style.display = "block";
+}
+
+function window3() {
+  add.style.display = "block";
+}
+
+function window4() {
+  balance.style.display = "block";
+}
+
+function Back() {
+  mobile.style.display = "none";
+  account.style.display = "none";
+  add.style.display = "none";
+  balance.style.display = "none";
+
+  pop1.style.display = "none";
+  pop2.style.display = "none";
+  pop3.style.display = "none";
+  pop4.style.display = "none";
+}
+
+let checkbalance = document.getElementById("balance");
+checkbalance.textContent = `₹ ${accountbalance}`;
+function sendMoneyViaMobile() {
+  let total1 = document.getElementById("total1");
+  pop4.style.display = "block";
+  if (input1.value == 0 && input2.value == 0) {
+    alert("Please enter the required field");
+  } else {
+    mobile.style.display = "none";
+    pop4.style.display = "block";
+  }
+  total1.textContent = `₹${input2.value}`;
+
+  setTimeout(function () {
+    new Promise(function (resolve, reject) {
+      pop4.style.display = "none";
+      document.getElementById("pop1").style.display = "block";
+      accountbalance = accountbalance - Number(input2.value);
+      console.log(accountbalance);
+      resolve("promised");
+    });
+  }, 4000);
+  input1.value = "";
+  input2.value = "";
+}
+
+function SendMoneyViaAccount() {
+  let total2 = document.getElementById("total2");
+  if (input3.value == 0 && input4.value == 0) {
+    alert("Please enter the required field");
+  } else {
+    account.style.display = "none";
+    pop4.style.display = "block";
+  }
+  total2.textContent = `₹${input4.value}`;
+  setTimeout(function () {
+    new Promise(function (resolve, reject) {
+      pop4.style.display = "none";
+      document.getElementById("pop2").style.display = "block";
+      accountbalance = accountbalance - Number(input4.value);
+      resolve("promised");
+    });
+  }, 5000);
+  input3.value = "";
+  input4.value = "";
+}
+
+function AddMoney() {
+  let total3 = document.getElementById("total3");
+  if (input5.value == 0) {
+    alert("Please enter the required field");
+  } else {
+    add.style.display = "none";
+    pop4.style.display = "block";
+  }
+  total3.textContent = `₹${input5.value}`;
+  setTimeout(function () {
+    new Promise(function (resolve, reject) {
+      pop4.style.display = "none";
+      document.getElementById("pop3").style.display = "block";
+      accountbalance = accountbalance + Number(input5.value);
+      resolve("promised");
+    });
+  }, 3000);
+  input5.value = "";
+}
+</script>
 </html>
