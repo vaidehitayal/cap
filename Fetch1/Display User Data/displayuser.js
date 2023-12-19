@@ -22,7 +22,7 @@ function fetchUsers(){
         })
         document.getElementById('userlist').innerHTML = output;
     })
-    .catch(function(err){
-        console.log(err)
+    .catch(function(erra){
+        console.log(erra)
     })
 }
